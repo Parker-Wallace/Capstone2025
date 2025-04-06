@@ -98,7 +98,7 @@
 ## 🔁 Convert Quote to Policy
 
 ### ➕ Convert (by Representative)
-**POST** `http://localhost:8080/api/representatives/1/convert-quote`
+**POST** `http://localhost:8080/api/representatives/1/convert-quote`   <-Needs a rep ID (Where the 1 is in this case)and call to convert-quote
 
 ```json
 {
