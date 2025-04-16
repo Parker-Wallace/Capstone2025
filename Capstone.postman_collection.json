@@ -1,0 +1,739 @@
+{
+	"info": {
+		"_postman_id": "ed256ac8-44ad-462b-931d-c8d4c016aa42",
+		"name": "Capstone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42357994"
+	},
+	"item": [
+		{
+			"name": "CreateRep",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "localhost:8080/registerrepresenative?email=TestREP@notarealdomain.net&password=Password1&username=John Rep&dateOfBirth=2002-12-31",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"registerrepresenative"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "TestREP@notarealdomain.net"
+						},
+						{
+							"key": "password",
+							"value": "Password1"
+						},
+						{
+							"key": "username",
+							"value": "John Rep"
+						},
+						{
+							"key": "dateOfBirth",
+							"value": "2002-12-31"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateUser",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/register?email=Test@notarealdomain.net&password=Password1&username=John Smithless&dateOfBirth=2002-12-31",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"register"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "Test@notarealdomain.net"
+						},
+						{
+							"key": "password",
+							"value": "Password1"
+						},
+						{
+							"key": "username",
+							"value": "John Smithless"
+						},
+						{
+							"key": "dateOfBirth",
+							"value": "2002-12-31"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/login?email=Test@notarealdomain.net&password=Password1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "Test@notarealdomain.net"
+						},
+						{
+							"key": "password",
+							"value": "Password1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllUsers",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/token/3966e135-e0fa-4f1a-9130-3c7263998417/allusers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"token",
+						"3966e135-e0fa-4f1a-9130-3c7263998417",
+						"allusers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserById",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/getuser/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getuser",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateUser",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/updateuser/1?name=JohnUpdated&email=updated@email.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"updateuser",
+						"1"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "JohnUpdated"
+						},
+						{
+							"key": "email",
+							"value": "updated@email.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddHomeQuote",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/token/77217a85-2cea-4369-a2b4-d0822a0796d8/homequote?insuredHome.dateBuilt=2020-01-01&insuredHome.homeValue=350000&insuredHome.liabilityLimit=500000&insuredHome.dwellingType=BUNGALOW&insuredHome.heatingType=ELECTRIC&insuredHome.locationType=URBAN&basePremium=500&taxRate=0.15&totalPremium=783.75&startDate=2025-04-16&endDate=2026-04-16&hasAutoPolicyDiscount=false",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"token",
+						"77217a85-2cea-4369-a2b4-d0822a0796d8",
+						"homequote"
+					],
+					"query": [
+						{
+							"key": "insuredHome.dateBuilt",
+							"value": "2020-01-01"
+						},
+						{
+							"key": "insuredHome.homeValue",
+							"value": "350000"
+						},
+						{
+							"key": "insuredHome.liabilityLimit",
+							"value": "500000"
+						},
+						{
+							"key": "insuredHome.dwellingType",
+							"value": "BUNGALOW"
+						},
+						{
+							"key": "insuredHome.heatingType",
+							"value": "ELECTRIC"
+						},
+						{
+							"key": "insuredHome.locationType",
+							"value": "URBAN"
+						},
+						{
+							"key": "basePremium",
+							"value": "500"
+						},
+						{
+							"key": "taxRate",
+							"value": "0.15"
+						},
+						{
+							"key": "totalPremium",
+							"value": "783.75"
+						},
+						{
+							"key": "startDate",
+							"value": "2025-04-16"
+						},
+						{
+							"key": "endDate",
+							"value": "2026-04-16"
+						},
+						{
+							"key": "hasAutoPolicyDiscount",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddAutoQuote",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/token/77217a85-2cea-4369-a2b4-d0822a0796d8/autoquote?insuredAutomobile.vehicleMake=Honda&insuredAutomobile.vehicleModel=Civic&insuredAutomobile.vehicleManufactureDate=2018-01-01&insuredAutomobile.numberofAccidents=1&driverAge=23&basePremium=750&taxRate=0.15&totalPremium=1614.84&startDate=2025-04-16&endDate=2026-04-16&activeStatus=1&hasHomePolicyDiscount=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"token",
+						"77217a85-2cea-4369-a2b4-d0822a0796d8",
+						"autoquote"
+					],
+					"query": [
+						{
+							"key": "insuredAutomobile.vehicleMake",
+							"value": "Honda"
+						},
+						{
+							"key": "insuredAutomobile.vehicleModel",
+							"value": "Civic"
+						},
+						{
+							"key": "insuredAutomobile.vehicleManufactureDate",
+							"value": "2018-01-01"
+						},
+						{
+							"key": "insuredAutomobile.numberofAccidents",
+							"value": "1"
+						},
+						{
+							"key": "driverAge",
+							"value": "23"
+						},
+						{
+							"key": "basePremium",
+							"value": "750"
+						},
+						{
+							"key": "taxRate",
+							"value": "0.15"
+						},
+						{
+							"key": "totalPremium",
+							"value": "1614.84"
+						},
+						{
+							"key": "startDate",
+							"value": "2025-04-16"
+						},
+						{
+							"key": "endDate",
+							"value": "2026-04-16"
+						},
+						{
+							"key": "activeStatus",
+							"value": "1"
+						},
+						{
+							"key": "hasHomePolicyDiscount",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HomeQuoteToPolicy",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/token/77217a85-2cea-4369-a2b4-d0822a0796d8/3/createhomepolicyfromquote",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"token",
+						"77217a85-2cea-4369-a2b4-d0822a0796d8",
+						"3",
+						"createhomepolicyfromquote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AutoQuoteToPolicy",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/token/77217a85-2cea-4369-a2b4-d0822a0796d8/1/createautopolicyfromquote",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"token",
+						"77217a85-2cea-4369-a2b4-d0822a0796d8",
+						"1",
+						"createautopolicyfromquote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllUserPolicies",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/token/77217a85-2cea-4369-a2b4-d0822a0796d8/alluserpolicies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"token",
+						"77217a85-2cea-4369-a2b4-d0822a0796d8",
+						"alluserpolicies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllUserHomePolicies",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/token/77217a85-2cea-4369-a2b4-d0822a0796d8/alluserhomepolicies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"token",
+						"77217a85-2cea-4369-a2b4-d0822a0796d8",
+						"alluserhomepolicies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllUserAutoPolicies",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/token/77217a85-2cea-4369-a2b4-d0822a0796d8/alluserautopolicies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"token",
+						"77217a85-2cea-4369-a2b4-d0822a0796d8",
+						"alluserautopolicies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllHomePolicies",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/token/3966e135-e0fa-4f1a-9130-3c7263998417/allhomepolicies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"token",
+						"3966e135-e0fa-4f1a-9130-3c7263998417",
+						"allhomepolicies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllAutoPolicies",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/token/3966e135-e0fa-4f1a-9130-3c7263998417/allautopolicies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"token",
+						"3966e135-e0fa-4f1a-9130-3c7263998417",
+						"allautopolicies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllPolicies",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/token/3966e135-e0fa-4f1a-9130-3c7263998417/allpolicies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"token",
+						"3966e135-e0fa-4f1a-9130-3c7263998417",
+						"allpolicies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CancelAutoPolicy",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/token/77217a85-2cea-4369-a2b4-d0822a0796d8/1/cancelautopolicy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"token",
+						"77217a85-2cea-4369-a2b4-d0822a0796d8",
+						"1",
+						"cancelautopolicy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAutoPolicyById",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/token/77217a85-2cea-4369-a2b4-d0822a0796d8/1/getAutoPolicy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"token",
+						"77217a85-2cea-4369-a2b4-d0822a0796d8",
+						"1",
+						"getAutoPolicy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CncelHomePolicy",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/token/77217a85-2cea-4369-a2b4-d0822a0796d8/3/cancelhomepolicy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"token",
+						"77217a85-2cea-4369-a2b4-d0822a0796d8",
+						"3",
+						"cancelhomepolicy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetHomePolicyById",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/token/77217a85-2cea-4369-a2b4-d0822a0796d8/3/getHomePolicy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"token",
+						"77217a85-2cea-4369-a2b4-d0822a0796d8",
+						"3",
+						"getHomePolicy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateAutoPolicy",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/token/77217a85-2cea-4369-a2b4-d0822a0796d8/1/updateautopolicyautomobile?insuredAutomobile.vehicleMake=Toyota&insuredAutomobile.vehicleModel=Camry&insuredAutomobile.vehicleManufactureDate=2017-01-01&insuredAutomobile.numberofAccidents=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"token",
+						"77217a85-2cea-4369-a2b4-d0822a0796d8",
+						"1",
+						"updateautopolicyautomobile"
+					],
+					"query": [
+						{
+							"key": "insuredAutomobile.vehicleMake",
+							"value": "Toyota"
+						},
+						{
+							"key": "insuredAutomobile.vehicleModel",
+							"value": "Camry"
+						},
+						{
+							"key": "insuredAutomobile.vehicleManufactureDate",
+							"value": "2017-01-01"
+						},
+						{
+							"key": "insuredAutomobile.numberofAccidents",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateHomePolicy",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/token/77217a85-2cea-4369-a2b4-d0822a0796d8/3/updatehomepolicyhome?insuredHome.dateBuilt=1995-01-01&insuredHome.homeValue=275000&insuredHome.liabilityLimit=1000000&insuredHome.dwellingType=BUNGALOW&insuredHome.heatingType=GAS&insuredHome.locationType=URBAN",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"token",
+						"77217a85-2cea-4369-a2b4-d0822a0796d8",
+						"3",
+						"updatehomepolicyhome"
+					],
+					"query": [
+						{
+							"key": "insuredHome.dateBuilt",
+							"value": "1995-01-01"
+						},
+						{
+							"key": "insuredHome.homeValue",
+							"value": "275000"
+						},
+						{
+							"key": "insuredHome.liabilityLimit",
+							"value": "1000000"
+						},
+						{
+							"key": "insuredHome.dwellingType",
+							"value": "BUNGALOW"
+						},
+						{
+							"key": "insuredHome.heatingType",
+							"value": "GAS"
+						},
+						{
+							"key": "insuredHome.locationType",
+							"value": "URBAN"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
