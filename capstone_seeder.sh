@@ -49,55 +49,75 @@ done
 echo "Tokens collected."
 
 
-curl -s -X POST "$API_URL/token/${TOKENS["Emily Buyer"]}/homequote" \
-  -F "insuredHome.dateBuilt=1990-01-01" -F "insuredHome.homeValue=350000" -F "insuredHome.liabilityLimit=2500000" \
-  -F "insuredHome.dwellingType=BUNGALOW" -F "insuredHome.heatingType=OIL" -F "insuredHome.locationType=RURAL" \
+curl -s -X POST "$API_URL/${TOKENS["Emily Buyer"]}/homequote" \
+  -F "insuredHome.dateBuilt=1990-01-01" -F "insuredHome.homeValue=350000" \
+  -F "insuredHome.liabilityLimit=2500000" \
+  -F "insuredHome.dwellingType=BUNGALOW" \
+  -F "insuredHome.heatingType=OIL" \
+  -F "insuredHome.locationType=RURAL" \
   -F "basePremium=500" -F "taxRate=0.15" -F "totalPremium=1350" \
   -F "startDate=2025-04-16" -F "endDate=2026-04-16" -F "activeStatus=1" > /dev/null
 
-curl -s -X POST "$API_URL/token/${TOKENS["Emily Buyer"]}/autoquote" \
-  -F "driverAge=22" -F "insuredAutomobile.vehicleMake=Ford" -F "insuredAutomobile.vehicleModel=Focus" \
-  -F "insuredAutomobile.vehicleManufactureDate=2015-01-01" -F "insuredAutomobile.numberofAccidents=2" \
+curl -s -X POST "$API_URL/${TOKENS["Emily Buyer"]}/autoquote" \
+  -F "driverAge=22" -F "insuredAutomobile.vehicleMake=Ford" \
+  -F "insuredAutomobile.vehicleModel=Focus" \
+  -F "insuredAutomobile.vehicleManufactureDate=2015-01-01" \
+  -F "insuredAutomobile.numberofAccidents=2" \
   -F "basePremium=750" -F "taxRate=0.15" -F "totalPremium=1720" \
   -F "startDate=2025-04-16" -F "endDate=2026-04-16" -F "activeStatus=1" > /dev/null
 
-curl -s -X POST "$API_URL/token/${TOKENS["Susan Repster"]}/homepolicy" \
-  -F "insuredHome.dateBuilt=1980-01-01" -F "insuredHome.homeValue=400000" -F "insuredHome.liabilityLimit=2500000" \
-  -F "insuredHome.dwellingType=STANDALONE" -F "insuredHome.heatingType=GAS" -F "insuredHome.locationType=URBAN" \
+curl -s -X POST "$API_URL/${TOKENS["Susan Repster"]}/homepolicy" \
+  -F "insuredHome.dateBuilt=1980-01-01" -F "insuredHome.homeValue=400000" \
+  -F "insuredHome.liabilityLimit=2500000" \
+  -F "insuredHome.dwellingType=STANDALONE" \
+  -F "insuredHome.heatingType=GAS" \
+  -F "insuredHome.locationType=URBAN" \
   -F "basePremium=500" -F "taxRate=0.15" -F "totalPremium=1400" \
   -F "startDate=2025-04-16" -F "endDate=2026-04-16" -F "activeStatus=1" > /dev/null
 
-curl -s -X POST "$API_URL/token/${TOKENS["John Smithless"]}/autoquote" \
-  -F "driverAge=25" -F "insuredAutomobile.vehicleMake=Honda" -F "insuredAutomobile.vehicleModel=Civic" \
-  -F "insuredAutomobile.vehicleManufactureDate=2018-01-01" -F "insuredAutomobile.numberofAccidents=1" \
+curl -s -X POST "$API_URL/${TOKENS["John Smithless"]}/autoquote" \
+  -F "driverAge=25" -F "insuredAutomobile.vehicleMake=Honda" \
+  -F "insuredAutomobile.vehicleModel=Civic" \
+  -F "insuredAutomobile.vehicleManufactureDate=2018-01-01" \
+  -F "insuredAutomobile.numberofAccidents=1" \
   -F "basePremium=750" -F "taxRate=0.15" -F "totalPremium=1600" \
   -F "startDate=2025-04-16" -F "endDate=2026-04-16" -F "activeStatus=1" > /dev/null
 
-curl -s -X POST "$API_URL/token/${TOKENS["Mike Tenant"]}/autopolicy" \
-  -F "driverAge=35" -F "insuredAutomobile.vehicleMake=Subaru" -F "insuredAutomobile.vehicleModel=Impreza" \
-  -F "insuredAutomobile.vehicleManufactureDate=2017-01-01" -F "insuredAutomobile.numberofAccidents=1" \
+curl -s -X POST "$API_URL/${TOKENS["Mike Tenant"]}/autopolicy" \
+  -F "driverAge=35" -F "insuredAutomobile.vehicleMake=Subaru" \
+  -F "insuredAutomobile.vehicleModel=Impreza" \
+  -F "insuredAutomobile.vehicleManufactureDate=2017-01-01" \
+  -F "insuredAutomobile.numberofAccidents=1" \
   -F "basePremium=750" -F "taxRate=0.15" -F "totalPremium=1580" \
   -F "startDate=2025-04-16" -F "endDate=2026-04-16" -F "activeStatus=1" > /dev/null
 
-curl -s -X POST "$API_URL/token/${TOKENS["Mike Tenant"]}/homequote" \
-  -F "insuredHome.dateBuilt=2005-01-01" -F "insuredHome.homeValue=310000" -F "insuredHome.liabilityLimit=1800000" \
-  -F "insuredHome.dwellingType=BUNGALOW" -F "insuredHome.heatingType=GAS" -F "insuredHome.locationType=URBAN" \
+curl -s -X POST "$API_URL/${TOKENS["Mike Tenant"]}/homequote" \
+  -F "insuredHome.dateBuilt=2005-01-01" -F "insuredHome.homeValue=310000" \
+  -F "insuredHome.liabilityLimit=1800000" \
+  -F "insuredHome.dwellingType=BUNGALOW" \
+  -F "insuredHome.heatingType=GAS" \
+  -F "insuredHome.locationType=URBAN" \
   -F "basePremium=500" -F "taxRate=0.15" -F "totalPremium=1270" \
   -F "startDate=2025-04-16" -F "endDate=2026-04-16" -F "activeStatus=1" > /dev/null
 
-curl -s -X POST "$API_URL/token/${TOKENS["John Smithless"]}/homepolicy" \
-  -F "insuredHome.dateBuilt=1995-01-01" -F "insuredHome.homeValue=275000" -F "insuredHome.liabilityLimit=1500000" \
-  -F "insuredHome.dwellingType=BUNGALOW" -F "insuredHome.heatingType=ELECTRIC" -F "insuredHome.locationType=RURAL" \
+curl -s -X POST "$API_URL/${TOKENS["John Smithless"]}/homepolicy" \
+  -F "insuredHome.dateBuilt=1995-01-01" -F "insuredHome.homeValue=275000" \
+  -F "insuredHome.liabilityLimit=1500000" \
+  -F "insuredHome.dwellingType=BUNGALOW" \
+  -F "insuredHome.heatingType=ELECTRIC" \
+  -F "insuredHome.locationType=RURAL" \
   -F "basePremium=500" -F "taxRate=0.15" -F "totalPremium=1200" \
   -F "startDate=2025-04-16" -F "endDate=2026-04-16" -F "activeStatus=1" > /dev/null
 
-curl -s -X POST "$API_URL/token/${TOKENS["Rep Man"]}/autopolicy" \
-  -F "driverAge=45" -F "insuredAutomobile.vehicleMake=Chevy" -F "insuredAutomobile.vehicleModel=Malibu" \
-  -F "insuredAutomobile.vehicleManufactureDate=2010-01-01" -F "insuredAutomobile.numberofAccidents=3" \
+curl -s -X POST "$API_URL/${TOKENS["Rep Man"]}/autopolicy" \
+  -F "driverAge=45" -F "insuredAutomobile.vehicleMake=Chevy" \
+  -F "insuredAutomobile.vehicleModel=Malibu" \
+  -F "insuredAutomobile.vehicleManufactureDate=2010-01-01" \
+  -F "insuredAutomobile.numberofAccidents=3" \
   -F "basePremium=750" -F "taxRate=0.15" -F "totalPremium=2200" \
   -F "startDate=2025-04-16" -F "endDate=2026-04-16" -F "activeStatus=1" > /dev/null
 
-curl -s -X POST "$API_URL/token/${TOKENS["Hayden Stone"]}/homepolicy" \
+curl -s -X POST "$API_URL/${TOKENS["Hayden Stone"]}/homepolicy" \
   -F "insuredHome.dateBuilt=1996-01-01" -F "insuredHome.homeValue=318443" \
   -F "insuredHome.liabilityLimit=1500000" \
   -F "insuredHome.dwellingType=BUNGALOW" \
@@ -106,7 +126,7 @@ curl -s -X POST "$API_URL/token/${TOKENS["Hayden Stone"]}/homepolicy" \
   -F "basePremium=500" -F "taxRate=0.15" -F "totalPremium=1345.09" \
   -F "startDate=2025-04-16" -F "endDate=2026-04-16" -F "activeStatus=1" > /dev/null
 
-curl -s -X POST "$API_URL/token/${TOKENS["Hayden Blake"]}/homepolicy" \
+curl -s -X POST "$API_URL/${TOKENS["Hayden Blake"]}/homepolicy" \
   -F "insuredHome.dateBuilt=1994-01-01" -F "insuredHome.homeValue=277121" \
   -F "insuredHome.liabilityLimit=2000000" \
   -F "insuredHome.dwellingType=STANDALONE" \
@@ -115,7 +135,7 @@ curl -s -X POST "$API_URL/token/${TOKENS["Hayden Blake"]}/homepolicy" \
   -F "basePremium=500" -F "taxRate=0.15" -F "totalPremium=1376.08" \
   -F "startDate=2025-04-16" -F "endDate=2026-04-16" -F "activeStatus=1" > /dev/null
 
-curl -s -X POST "$API_URL/token/${TOKENS["Jordan Stone"]}/autopolicy" \
+curl -s -X POST "$API_URL/${TOKENS["Jordan Stone"]}/autopolicy" \
   -F "driverAge=30" -F "insuredAutomobile.vehicleMake=Chevy" \
   -F "insuredAutomobile.vehicleModel=Focus" \
   -F "insuredAutomobile.vehicleManufactureDate=2012-01-01" \
@@ -123,7 +143,7 @@ curl -s -X POST "$API_URL/token/${TOKENS["Jordan Stone"]}/autopolicy" \
   -F "basePremium=750" -F "taxRate=0.15" -F "totalPremium=1443.76" \
   -F "startDate=2025-04-16" -F "endDate=2026-04-16" -F "activeStatus=1" > /dev/null
 
-curl -s -X POST "$API_URL/token/${TOKENS["Taylor Dale"]}/homequote" \
+curl -s -X POST "$API_URL/${TOKENS["Taylor Dale"]}/homequote" \
   -F "insuredHome.dateBuilt=1992-01-01" -F "insuredHome.homeValue=377583" \
   -F "insuredHome.liabilityLimit=1500000" \
   -F "insuredHome.dwellingType=BUNGALOW" \
@@ -132,7 +152,7 @@ curl -s -X POST "$API_URL/token/${TOKENS["Taylor Dale"]}/homequote" \
   -F "basePremium=500" -F "taxRate=0.15" -F "totalPremium=1256.04" \
   -F "startDate=2025-04-16" -F "endDate=2026-04-16" -F "activeStatus=1" > /dev/null
 
-curl -s -X POST "$API_URL/token/${TOKENS["Skylar Dale"]}/homequote" \
+curl -s -X POST "$API_URL/${TOKENS["Skylar Dale"]}/homequote" \
   -F "insuredHome.dateBuilt=1996-01-01" -F "insuredHome.homeValue=291499" \
   -F "insuredHome.liabilityLimit=1500000" \
   -F "insuredHome.dwellingType=BUNGALOW" \
@@ -141,7 +161,7 @@ curl -s -X POST "$API_URL/token/${TOKENS["Skylar Dale"]}/homequote" \
   -F "basePremium=500" -F "taxRate=0.15" -F "totalPremium=1445.57" \
   -F "startDate=2025-04-16" -F "endDate=2026-04-16" -F "activeStatus=1" > /dev/null
 
-curl -s -X POST "$API_URL/token/${TOKENS["Casey Harper"]}/homequote" \
+curl -s -X POST "$API_URL/${TOKENS["Casey Harper"]}/homequote" \
   -F "insuredHome.dateBuilt=1998-01-01" -F "insuredHome.homeValue=268660" \
   -F "insuredHome.liabilityLimit=1500000" \
   -F "insuredHome.dwellingType=BUNGALOW" \
@@ -150,7 +170,7 @@ curl -s -X POST "$API_URL/token/${TOKENS["Casey Harper"]}/homequote" \
   -F "basePremium=500" -F "taxRate=0.15" -F "totalPremium=1489.15" \
   -F "startDate=2025-04-16" -F "endDate=2026-04-16" -F "activeStatus=1" > /dev/null
 
-curl -s -X POST "$API_URL/token/${TOKENS["Hayden Fox"]}/autopolicy" \
+curl -s -X POST "$API_URL/${TOKENS["Hayden Fox"]}/autopolicy" \
   -F "driverAge=28" -F "insuredAutomobile.vehicleMake=Ford" \
   -F "insuredAutomobile.vehicleModel=Civic" \
   -F "insuredAutomobile.vehicleManufactureDate=2015-01-01" \
@@ -158,7 +178,7 @@ curl -s -X POST "$API_URL/token/${TOKENS["Hayden Fox"]}/autopolicy" \
   -F "basePremium=750" -F "taxRate=0.15" -F "totalPremium=1373.46" \
   -F "startDate=2025-04-16" -F "endDate=2026-04-16" -F "activeStatus=1" > /dev/null
 
-curl -s -X POST "$API_URL/token/${TOKENS["Riley Gray"]}/homequote" \
+curl -s -X POST "$API_URL/${TOKENS["Riley Gray"]}/homequote" \
   -F "insuredHome.dateBuilt=1990-01-01" -F "insuredHome.homeValue=369079" \
   -F "insuredHome.liabilityLimit=2500000" \
   -F "insuredHome.dwellingType=STANDALONE" \
@@ -167,7 +187,7 @@ curl -s -X POST "$API_URL/token/${TOKENS["Riley Gray"]}/homequote" \
   -F "basePremium=500" -F "taxRate=0.15" -F "totalPremium=1302.65" \
   -F "startDate=2025-04-16" -F "endDate=2026-04-16" -F "activeStatus=1" > /dev/null
 
-curl -s -X POST "$API_URL/token/${TOKENS["Morgan Sage"]}/homequote" \
+curl -s -X POST "$API_URL/${TOKENS["Morgan Sage"]}/homequote" \
   -F "insuredHome.dateBuilt=1999-01-01" -F "insuredHome.homeValue=279344" \
   -F "insuredHome.liabilityLimit=2000000" \
   -F "insuredHome.dwellingType=BUNGALOW" \
@@ -176,7 +196,7 @@ curl -s -X POST "$API_URL/token/${TOKENS["Morgan Sage"]}/homequote" \
   -F "basePremium=500" -F "taxRate=0.15" -F "totalPremium=1200.09" \
   -F "startDate=2025-04-16" -F "endDate=2026-04-16" -F "activeStatus=1" > /dev/null
 
-curl -s -X POST "$API_URL/token/${TOKENS["Reese Harper"]}/homepolicy" \
+curl -s -X POST "$API_URL/${TOKENS["Reese Harper"]}/homepolicy" \
   -F "insuredHome.dateBuilt=1991-01-01" -F "insuredHome.homeValue=369876" \
   -F "insuredHome.liabilityLimit=2000000" \
   -F "insuredHome.dwellingType=BUNGALOW" \
