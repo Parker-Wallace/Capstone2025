@@ -128,15 +128,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/token/3966e135-e0fa-4f1a-9130-3c7263998417/allusers",
+					"raw": "http://localhost:8080/5fcdaa7b-737a-4c3d-9f4f-4fdd46a3cf07/allusers",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"token",
-						"3966e135-e0fa-4f1a-9130-3c7263998417",
+						"5fcdaa7b-737a-4c3d-9f4f-4fdd46a3cf07",
 						"allusers"
 					]
 				}
@@ -152,7 +151,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/getuser/1",
+					"raw": "http://localhost:8080/getuser/54",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -160,7 +159,7 @@
 					"port": "8080",
 					"path": [
 						"getuser",
-						"1"
+						"54"
 					]
 				}
 			},
@@ -207,67 +206,86 @@
 				},
 				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "insuredHome.dateBuilt",
+							"value": "2020-01-01",
+							"type": "text"
+						},
+						{
+							"key": "insuredHome.homeValue",
+							"value": "350000",
+							"type": "text"
+						},
+						{
+							"key": "insuredHome.liabilityLimit",
+							"value": "500000",
+							"type": "text"
+						},
+						{
+							"key": "insuredHome.dwellingType",
+							"value": "BUNGALOW",
+							"type": "text"
+						},
+						{
+							"key": "insuredHome.heatingType",
+							"value": "ELECTRIC",
+							"type": "text"
+						},
+						{
+							"key": "insuredHome.locationType",
+							"value": "URBAN",
+							"type": "text"
+						},
+						{
+							"key": "basePremium",
+							"value": "500",
+							"type": "text"
+						},
+						{
+							"key": "taxRate",
+							"value": "0.15",
+							"type": "text"
+						},
+						{
+							"key": "totalPremium",
+							"value": "783.75",
+							"type": "text"
+						},
+						{
+							"key": "startDate",
+							"value": "2025-04-16",
+							"type": "text"
+						},
+						{
+							"key": "endDate",
+							"value": "2026-04-16",
+							"type": "text"
+						},
+						{
+							"key": "hasAutoPolicyDiscount",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "activeStatus",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
 				"url": {
-					"raw": "http://localhost:8080/token/77217a85-2cea-4369-a2b4-d0822a0796d8/homequote?insuredHome.dateBuilt=2020-01-01&insuredHome.homeValue=350000&insuredHome.liabilityLimit=500000&insuredHome.dwellingType=BUNGALOW&insuredHome.heatingType=ELECTRIC&insuredHome.locationType=URBAN&basePremium=500&taxRate=0.15&totalPremium=783.75&startDate=2025-04-16&endDate=2026-04-16&hasAutoPolicyDiscount=false",
+					"raw": "http://localhost:8080/5682c15b-967e-41de-ab19-1ddf9ea91e1d/homequote",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"token",
-						"77217a85-2cea-4369-a2b4-d0822a0796d8",
+						"5682c15b-967e-41de-ab19-1ddf9ea91e1d",
 						"homequote"
-					],
-					"query": [
-						{
-							"key": "insuredHome.dateBuilt",
-							"value": "2020-01-01"
-						},
-						{
-							"key": "insuredHome.homeValue",
-							"value": "350000"
-						},
-						{
-							"key": "insuredHome.liabilityLimit",
-							"value": "500000"
-						},
-						{
-							"key": "insuredHome.dwellingType",
-							"value": "BUNGALOW"
-						},
-						{
-							"key": "insuredHome.heatingType",
-							"value": "ELECTRIC"
-						},
-						{
-							"key": "insuredHome.locationType",
-							"value": "URBAN"
-						},
-						{
-							"key": "basePremium",
-							"value": "500"
-						},
-						{
-							"key": "taxRate",
-							"value": "0.15"
-						},
-						{
-							"key": "totalPremium",
-							"value": "783.75"
-						},
-						{
-							"key": "startDate",
-							"value": "2025-04-16"
-						},
-						{
-							"key": "endDate",
-							"value": "2026-04-16"
-						},
-						{
-							"key": "hasAutoPolicyDiscount",
-							"value": "false"
-						}
 					]
 				}
 			},
@@ -282,15 +300,14 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/token/77217a85-2cea-4369-a2b4-d0822a0796d8/autoquote?insuredAutomobile.vehicleMake=Honda&insuredAutomobile.vehicleModel=Civic&insuredAutomobile.vehicleManufactureDate=2018-01-01&insuredAutomobile.numberofAccidents=1&driverAge=23&basePremium=750&taxRate=0.15&totalPremium=1614.84&startDate=2025-04-16&endDate=2026-04-16&activeStatus=1&hasHomePolicyDiscount=true",
+					"raw": "http://localhost:8080/5682c15b-967e-41de-ab19-1ddf9ea91e1d/autoquote?insuredAutomobile.vehicleMake=Honda&insuredAutomobile.vehicleModel=Civic&insuredAutomobile.vehicleManufactureDate=2018-01-01&insuredAutomobile.numberofAccidents=1&driverAge=23&basePremium=750&taxRate=0.15&totalPremium=1614.84&startDate=2025-04-16&endDate=2026-04-16&activeStatus=1&hasHomePolicyDiscount=true",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"token",
-						"77217a85-2cea-4369-a2b4-d0822a0796d8",
+						"5682c15b-967e-41de-ab19-1ddf9ea91e1d",
 						"autoquote"
 					],
 					"query": [
@@ -356,16 +373,15 @@
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/token/77217a85-2cea-4369-a2b4-d0822a0796d8/3/createhomepolicyfromquote",
+					"raw": "http://localhost:8080/5682c15b-967e-41de-ab19-1ddf9ea91e1d/26/createhomepolicyfromquote",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"token",
-						"77217a85-2cea-4369-a2b4-d0822a0796d8",
-						"3",
+						"5682c15b-967e-41de-ab19-1ddf9ea91e1d",
+						"26",
 						"createhomepolicyfromquote"
 					]
 				}
@@ -381,16 +397,15 @@
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/token/77217a85-2cea-4369-a2b4-d0822a0796d8/1/createautopolicyfromquote",
+					"raw": "http://localhost:8080/5682c15b-967e-41de-ab19-1ddf9ea91e1d/19/createautopolicyfromquote",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"token",
-						"77217a85-2cea-4369-a2b4-d0822a0796d8",
-						"1",
+						"5682c15b-967e-41de-ab19-1ddf9ea91e1d",
+						"19",
 						"createautopolicyfromquote"
 					]
 				}
@@ -406,15 +421,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/token/77217a85-2cea-4369-a2b4-d0822a0796d8/alluserpolicies",
+					"raw": "http://localhost:8080/5682c15b-967e-41de-ab19-1ddf9ea91e1d/alluserpolicies",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"token",
-						"77217a85-2cea-4369-a2b4-d0822a0796d8",
+						"5682c15b-967e-41de-ab19-1ddf9ea91e1d",
 						"alluserpolicies"
 					]
 				}
@@ -430,15 +444,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/token/77217a85-2cea-4369-a2b4-d0822a0796d8/alluserhomepolicies",
+					"raw": "http://localhost:8080/5682c15b-967e-41de-ab19-1ddf9ea91e1d/alluserhomepolicies",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"token",
-						"77217a85-2cea-4369-a2b4-d0822a0796d8",
+						"5682c15b-967e-41de-ab19-1ddf9ea91e1d",
 						"alluserhomepolicies"
 					]
 				}
@@ -454,15 +467,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/token/77217a85-2cea-4369-a2b4-d0822a0796d8/alluserautopolicies",
+					"raw": "http://localhost:8080/5682c15b-967e-41de-ab19-1ddf9ea91e1d/alluserautopolicies",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"token",
-						"77217a85-2cea-4369-a2b4-d0822a0796d8",
+						"5682c15b-967e-41de-ab19-1ddf9ea91e1d",
 						"alluserautopolicies"
 					]
 				}
@@ -478,15 +490,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/token/3966e135-e0fa-4f1a-9130-3c7263998417/allhomepolicies",
+					"raw": "http://localhost:8080/5fcdaa7b-737a-4c3d-9f4f-4fdd46a3cf07/allhomepolicies",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"token",
-						"3966e135-e0fa-4f1a-9130-3c7263998417",
+						"5fcdaa7b-737a-4c3d-9f4f-4fdd46a3cf07",
 						"allhomepolicies"
 					]
 				}
@@ -502,15 +513,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/token/3966e135-e0fa-4f1a-9130-3c7263998417/allautopolicies",
+					"raw": "http://localhost:8080/5fcdaa7b-737a-4c3d-9f4f-4fdd46a3cf07/allautopolicies",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"token",
-						"3966e135-e0fa-4f1a-9130-3c7263998417",
+						"5fcdaa7b-737a-4c3d-9f4f-4fdd46a3cf07",
 						"allautopolicies"
 					]
 				}
@@ -526,15 +536,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/token/3966e135-e0fa-4f1a-9130-3c7263998417/allpolicies",
+					"raw": "http://localhost:8080/5fcdaa7b-737a-4c3d-9f4f-4fdd46a3cf07/allpolicies",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"token",
-						"3966e135-e0fa-4f1a-9130-3c7263998417",
+						"5fcdaa7b-737a-4c3d-9f4f-4fdd46a3cf07",
 						"allpolicies"
 					]
 				}
@@ -550,16 +559,15 @@
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/token/77217a85-2cea-4369-a2b4-d0822a0796d8/1/cancelautopolicy",
+					"raw": "http://localhost:8080/5682c15b-967e-41de-ab19-1ddf9ea91e1d/19/cancelautopolicy",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"token",
-						"77217a85-2cea-4369-a2b4-d0822a0796d8",
-						"1",
+						"5682c15b-967e-41de-ab19-1ddf9ea91e1d",
+						"19",
 						"cancelautopolicy"
 					]
 				}
@@ -575,16 +583,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/token/77217a85-2cea-4369-a2b4-d0822a0796d8/1/getAutoPolicy",
+					"raw": "http://localhost:8080/5682c15b-967e-41de-ab19-1ddf9ea91e1d/19/getAutoPolicy",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"token",
-						"77217a85-2cea-4369-a2b4-d0822a0796d8",
-						"1",
+						"5682c15b-967e-41de-ab19-1ddf9ea91e1d",
+						"19",
 						"getAutoPolicy"
 					]
 				}
@@ -592,7 +599,7 @@
 			"response": []
 		},
 		{
-			"name": "CncelHomePolicy",
+			"name": "CancelHomePolicy",
 			"request": {
 				"auth": {
 					"type": "noauth"
@@ -600,16 +607,15 @@
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/token/77217a85-2cea-4369-a2b4-d0822a0796d8/3/cancelhomepolicy",
+					"raw": "http://localhost:8080/5682c15b-967e-41de-ab19-1ddf9ea91e1d/26/cancelhomepolicy",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"token",
-						"77217a85-2cea-4369-a2b4-d0822a0796d8",
-						"3",
+						"5682c15b-967e-41de-ab19-1ddf9ea91e1d",
+						"26",
 						"cancelhomepolicy"
 					]
 				}
@@ -625,16 +631,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/token/77217a85-2cea-4369-a2b4-d0822a0796d8/3/getHomePolicy",
+					"raw": "http://localhost:8080/5682c15b-967e-41de-ab19-1ddf9ea91e1d/26/getHomePolicy",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"token",
-						"77217a85-2cea-4369-a2b4-d0822a0796d8",
-						"3",
+						"5682c15b-967e-41de-ab19-1ddf9ea91e1d",
+						"26",
 						"getHomePolicy"
 					]
 				}
@@ -650,16 +655,15 @@
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/token/77217a85-2cea-4369-a2b4-d0822a0796d8/1/updateautopolicyautomobile?insuredAutomobile.vehicleMake=Toyota&insuredAutomobile.vehicleModel=Camry&insuredAutomobile.vehicleManufactureDate=2017-01-01&insuredAutomobile.numberofAccidents=1",
+					"raw": "http://localhost:8080/5682c15b-967e-41de-ab19-1ddf9ea91e1d/19/updateautopolicyautomobile?insuredAutomobile.vehicleMake=Toyota&insuredAutomobile.vehicleModel=Camry&insuredAutomobile.vehicleManufactureDate=2017-01-01&insuredAutomobile.numberofAccidents=1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"token",
-						"77217a85-2cea-4369-a2b4-d0822a0796d8",
-						"1",
+						"5682c15b-967e-41de-ab19-1ddf9ea91e1d",
+						"19",
 						"updateautopolicyautomobile"
 					],
 					"query": [
@@ -693,16 +697,15 @@
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/token/77217a85-2cea-4369-a2b4-d0822a0796d8/3/updatehomepolicyhome?insuredHome.dateBuilt=1995-01-01&insuredHome.homeValue=275000&insuredHome.liabilityLimit=1000000&insuredHome.dwellingType=BUNGALOW&insuredHome.heatingType=GAS&insuredHome.locationType=URBAN",
+					"raw": "http://localhost:8080/5682c15b-967e-41de-ab19-1ddf9ea91e1d/26/updatehomepolicyhome?insuredHome.dateBuilt=1995-01-01&insuredHome.homeValue=275000&insuredHome.liabilityLimit=1000000&insuredHome.dwellingType=BUNGALOW&insuredHome.heatingType=GAS&insuredHome.locationType=URBAN",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"token",
-						"77217a85-2cea-4369-a2b4-d0822a0796d8",
-						"3",
+						"5682c15b-967e-41de-ab19-1ddf9ea91e1d",
+						"26",
 						"updatehomepolicyhome"
 					],
 					"query": [
@@ -730,6 +733,53 @@
 							"key": "insuredHome.locationType",
 							"value": "URBAN"
 						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegisterUser",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "TEST",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "test@example.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "CUSTOMER",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"register"
 					]
 				}
 			},
